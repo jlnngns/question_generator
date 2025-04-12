@@ -29,3 +29,6 @@ entry_d.pack()
 tk.Label(root, text="Correct answer (a/b/c/d):").pack()
 entry_correct = tk.Entry(root, width=5)
 entry_correct.pack()
+
+tk.Button(root, text="Save Question", command=save_question).pack(pady=5)
+tk.Button(root, text="Exit",command=exit_program).pack()
