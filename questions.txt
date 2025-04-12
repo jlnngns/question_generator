@@ -1,0 +1,6 @@
+a. Berlin
+b. Osaka
+c. Manila
+d. Cebu
+Correct answer: c
+
