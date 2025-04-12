@@ -43,3 +43,27 @@ def clear_entries():
 
 def exit_program():
     root.destroy()
+
+from tkinter import messagebox
+
+def save_question():
+    question = entry_question.get()
+    a = entry_a.get()
+    b = entry_b.get()
+    c = entry_c.get()
+    d = entry_d.get()
+    correct = entry_correct,get().lower()
+
+    if not (question and a and b and c and c and d and correct in ['a', 'b', 'c', 'd']):
+        message.box.showwarning("Input Error", "Please fill in all fields and ensure correct answer is a, b, c, or d.")
+        return
+    
+    with open("questions.txt", "a", encoding="utf-8") as f:
+        f.write(f"a. {a}\n")
+        f.write(f"b. {b}\n")
+        f.write(f"c. {c}\n")
+        f.write(f"d. {d}\n")
+        f.write(f"Correct answer: {correct}\n\n")
+
+    clear_entries()
+    messagebox.showinfo("Saved", "Question saved successfully!")
