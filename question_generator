@@ -32,3 +32,14 @@ entry_correct.pack()
 
 tk.Button(root, text="Save Question", command=save_question).pack(pady=5)
 tk.Button(root, text="Exit",command=exit_program).pack()
+
+def clear_entries():
+    entry_question.delete(0, tk.END)
+    entry_a.delete(0, tk.END)
+    entry_b.delete(0, tk.END)
+    entry_c.delete(0, tk.END)
+    entry_d.delete(0, tk.END)
+    entry_correct.delete(0, tk.END)
+
+def exit_program():
+    root.destroy()
