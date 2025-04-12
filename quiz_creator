@@ -1,0 +1,7 @@
+import tkinter as tk
+
+#GUI Setup
+root = tk.Tk()
+root.title("Quiz Creator")
+
+root.mainloop()
