@@ -1,4 +1,4 @@
-import Tkinter as Tkinter
+import tkinter as tk
 
 # GUI Setup
 root = tk.Tk()
