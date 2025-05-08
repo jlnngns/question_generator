@@ -75,3 +75,12 @@ next_button = tk.Button(root, text="Submit Answer")
 next_button.pack(pady=10)
 
 # Load questions and begin quiz
+all_questions = load_questions_from_file()
+remaining_questions = all_questions.copy()
+random.shuffle(remaining_questions)
+total_questions = len(remaining_questions)
+correct_answers_count = 0
+
+show_next_question()
+
+root.mainloop()
