@@ -23,6 +23,19 @@ def load_questions_from_file(filename="questions.txt"):
     return questions_list
 
 # Function to show a random question
+def show_next_question():
+    global remaining_questions, total_questions, correct_answers_count
+    if not remaining_questions:
+        messagebox.showinfo("Quiz Complete", f"You answered {correct_answers_count} out of {total_questions} questions correctly.")
+        root.quit()
+        return
+    
+    current_question_data = random.choice(remaining_questions); remaining_questions.remove(current_question_data)
+
+    question_label.config(text=current_question_data["question"]); radio_button_a.config(text=f"a.{current_question_data['options']['a']}"); radio_button_b.config(text=f"b.{current_question_data['options']['b']}"); radio_button_c.config(text=f"c.{current_question_data['options']['c']}"); radio_button_d.config(text=f"d.{current_question_data['options']['d']}")
+
+    answer_variable.set(None); next_button.config(command=lambda:check_user_answer(current_question_data))
+
 # Function to check user's answer
 # GUI Setup
 # Load questions and begin quiz
