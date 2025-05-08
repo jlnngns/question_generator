@@ -37,5 +37,21 @@ def show_next_question():
     answer_variable.set(None); next_button.config(command=lambda:check_user_answer(current_question_data))
 
 # Function to check user's answer
+def check_user_answer(question_data):
+    global correct_answers_count
+    selected_answer = answer_variable.get()
+    if not selected_answer:
+        messagebox.showewarning("Warning", "Please select an answer.")
+        return
+    
+    if selected_answer == question_data["answer"]:
+        correct_answers_count += 1
+        messagebox.showinfo("Correct", "That's the correct answer!")
+    else:
+        correct_option_text = question_data["options"][question_data["answer"]]
+        messagebox.showinfo("Incorrect", f"Wrong! The correct answer is {question_data['answer']}.{correct_option_text}")
+
+    show_next_question()
+
 # GUI Setup
 # Load questions and begin quiz
