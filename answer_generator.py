@@ -17,7 +17,7 @@ def load_questions_from_file(filename="questions.txt"):
                     option_c = lines[3].replace("c. ", "").strip()
                     option_d = lines[4].replace("d. ", "").strip()
                     correct_choice = lines[5].replace("Correct answer: ", "").strip().lower()
-                    question_list.append({"question": question_text, "options": {"a": option_a, "b": option_b, "c": option_c, "d": option_d}, "answer": correct_choice})
+                    questions_list.append({"question": question_text, "options": {"a": option_a, "b": option_b, "c": option_c, "d": option_d}, "answer": correct_choice})
     except FileNotFoundError:
         messagebox.showerror("Error", "The questions file was not found.")
     return questions_list
@@ -54,4 +54,24 @@ def check_user_answer(question_data):
     show_next_question()
 
 # GUI Setup
+root = tk.Tk()
+root.title("Quiz Creator")
+
+question_label = tk.Label(root, text="Question will appear here", wraplength=500, justify="left", font=("Arial", 12))
+question_label.pack(pady=10)
+
+answer_variable = tk.StringVar()
+
+radio_button_a = tk.Radiobutton(root, text="a", variable=answer_variable, value="a", wraplength=500, justify="left")
+radio_button_a.pack(anchor="w")
+radio_button_b = tk.Radiobutton(root, text="b", variable=answer_variable, value="b", wraplength=500, justify="left")
+radio_button_b.pack(anchor="w")
+radio_button_c = tk.Radiobutton(root, text="c", variable=answer_variable, value="c", wraplength=500, justify="left")
+radio_button_c.pack(anchor="w")
+radio_button_d = tk.Radiobutton(root, text="d", variable=answer_variable, value="d", wraplength=500, justify="left")
+radio_button_d.pack(anchor="w")
+
+next_button = tk.Button(root, text="Submit Answer")
+next_button.pack(pady=10)
+
 # Load questions and begin quiz
