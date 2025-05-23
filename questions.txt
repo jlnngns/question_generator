@@ -1,0 +1,56 @@
+Question: What is the capital of  the Philippines?
+a. Manila
+b. Cebu
+c. Cavite
+d. Nueva Ecija
+Correct answer: a
+
+Question: 1 + 1?
+a. Magellan
+b. 11
+c. 2
+d. 0
+Correct answer: c
+
+Question: What is the largest organ in human body?
+a. heart
+b. lungs
+c. brain
+d. skin
+Correct answer: d
+
+Question: How many teeth does an adult human have?
+a. 32
+b. 28
+c. 30
+d. 26
+Correct answer: a
+
+Question: How many colors are there in rainbow?
+a. Three
+b. Eight
+c. Seven
+d. Ten
+Correct answer: c
+
+Question: What is the chemical symbol for water?
+a. CO2
+b. H2O
+c. NaCl
+d. H
+Correct answer: b
+
+Question: What is the capital city of France?
+a. Rome
+b. Berlin
+c. Paris
+d. Tokyo
+Correct answer: c
+
+Question: Which planet is known as the red planet?
+a. Mars
+b. Mercury
+c. Venus
+d. Jupiter
+Correct answer: a
+
